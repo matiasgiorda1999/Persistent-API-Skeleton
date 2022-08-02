@@ -9,7 +9,6 @@ includes as dependencies: Stargate, Sagan, Kepler and Launchpad
 [![Markdown Lint](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/markdown-lint.yml)
 
 [![GitHub release](https://img.shields.io/github/release/mercap/Persistent-API-Skeleton.svg)](https://github.com/mercap/Persistent-API-Skeleton/releases/latest)
-[![Pharo 9](https://img.shields.io/badge/Pharo-9-informational)](https://pharo.org)
 [![Pharo 10](https://img.shields.io/badge/Pharo-10-informational)](https://pharo.org)
 
 ## Quick links

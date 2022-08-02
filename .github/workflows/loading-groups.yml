@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        smalltalk: [ Pharo64-10, Pharo64-9.0 ]
+        smalltalk: [ Pharo64-10 ]
         load-spec: [ core, sqlite3, postgres, deployment, dependent-sunit-extensions, tests, tools, development ]
     name: Baseline Groups / ${{ matrix.smalltalk }} + ${{ matrix.load-spec }}
     steps:

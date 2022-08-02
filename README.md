@@ -4,7 +4,7 @@ This project provides a skeleton to construct on top of it a persistent API. It
 includes as dependencies: Stargate, Sagan, Kepler and Launchpad
 
 [![Unit Tests](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/unit-tests.yml/badge.svg)
-[![Coverage Status](https://codecov.io/github/mercap/Persistent-API-Skeleton/coverage.svg?branch=release-candidate)](https://codecov.io/gh/mercap/Persistent-API-Skeleton/branch/release-candidate)
+[![Coverage Status](https://codecov.io/gh/Mercap/Persistent-API-Skeleton/branch/release-candidate/graph/badge.svg?token=0NTGPRUR5F)](https://codecov.io/gh/Mercap/Persistent-API-Skeleton)
 [![Baseline Groups](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/loading-groups.yml/badge.svg)](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/loading-groups.yml)
 [![Markdown Lint](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/mercap/Persistent-API-Skeleton/actions/workflows/markdown-lint.yml)
 

@@ -142,7 +142,16 @@ PersistentAPIApplication >> handleOptionsIn: context [
 PersistentAPIApplication >> installAndStartRootSystem [
 
 	LaunchpadLogRecord emitInfo: 'Installing system'.
-	rootSystem := self installation install: self class version.
+	Retry
+		value: [ 
+		rootSystem := self installation install: self class version ]
+		configuredBy: [ :retry | 
+			retry
+				upTo: 5;
+				backoffExponentiallyWithTimeSlot: 100 milliSeconds;
+				on: DatabaseLoginFailed evaluating: [ :tryCount :loginFailure | 
+					LaunchpadLogRecord emitInfo:
+							'Retry installation. Attempt number ' , tryCount asString ] ].
 	LaunchpadLogRecord emitInfo: 'Starting up system'.
 	rootSystem startUp
 ]

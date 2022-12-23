@@ -13,24 +13,6 @@ PersistentAPIApplication class >> configurationParameters [
 	^ super configurationParameters , self saganConfigurationParameters
 ]
 
-{ #category : #private }
-PersistentAPIApplication class >> defaultMaxActiveSessionsCount [
-
-	^ self subclassResponsibility
-]
-
-{ #category : #private }
-PersistentAPIApplication class >> defaultMaxIdleSessionsCount [
-
-	^ self subclassResponsibility
-]
-
-{ #category : #private }
-PersistentAPIApplication class >> defaultMinIdleSessionsCount [
-
-	^ self subclassResponsibility
-]
-
 { #category : #testing }
 PersistentAPIApplication class >> isAbstract [
 
@@ -41,36 +23,6 @@ PersistentAPIApplication class >> isAbstract [
 PersistentAPIApplication class >> saganConfigurationParameters [
 
 	^ self subclassResponsibility
-]
-
-{ #category : #private }
-PersistentAPIApplication class >> saganSessionPoolingConfigurationParameters [
-
-	^ Array
-		  with: ( OptionalConfigurationParameter
-				    named: 'Min Idle Sessions Count'
-				    describedBy: 'Minimum number of idle sessions to keep alive in the pool'
-				    inside: self sectionsForSaganConfiguration
-				    defaultingTo: self defaultMinIdleSessionsCount
-				    convertingWith: #asNumber )
-		  with: ( OptionalConfigurationParameter
-				    named: 'Max Idle Sessions Count'
-				    describedBy: 'Maximum number of idle sessions to keep alive in the pool'
-				    inside: self sectionsForSaganConfiguration
-				    defaultingTo: self defaultMaxIdleSessionsCount
-				    convertingWith: #asNumber )
-		  with: ( OptionalConfigurationParameter
-				    named: 'Max Active Sessions Count'
-				    describedBy: 'Maximum number of sessions alive'
-				    inside: self sectionsForSaganConfiguration
-				    defaultingTo: self defaultMaxActiveSessionsCount
-				    convertingWith: #asNumber )
-]
-
-{ #category : #private }
-PersistentAPIApplication class >> sectionsForSaganConfiguration [
-
-	^ #( 'Sagan' )
 ]
 
 { #category : #private }
